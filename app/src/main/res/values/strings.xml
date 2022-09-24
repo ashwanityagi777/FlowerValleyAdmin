@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Flower Valley Admin</string>
+    <string name="dashboard">DashBoard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flower_fragment">Flower Fragment</string>
+    <string name="view_all_flower_fragment">View All Flower Fragment</string>
+    <string name="banner_fragment">Banner Fragment</string>
+    <string name="view_all_banner_fragment">View All Banner Fragment</string>
+    <string name="order_fragment">Order Fragment</string>
+    <string name="admin_fragment">Admin Fragment</string>
+    <string name="login">Log in</string>
+    <string name="mobile">Mobile</string>
+    <string name="to_your_account">to your account</string>
+    <string name="flower_valley_admin">Flower Valley Admin</string>
+    <string name="verify">Verify</string>
+</resources>
