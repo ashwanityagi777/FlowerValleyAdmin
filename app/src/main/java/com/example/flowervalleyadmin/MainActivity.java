@@ -1,90 +1,78 @@
 package com.example.flowervalleyadmin;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import com.example.flowervalleyadmin.HomeActivity;
+import com.example.flowervalleyadmin.R;
+
 import soup.neumorphism.NeumorphCardView;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private final String mobile = "";
+    private NeumorphCardView addBanner, viewBanner, addFlower, viewFlower, viewOrder, viewProfile;
 
-    public NeumorphCardView add_flower,view_all_flower,banner,view_all_banner,order,admin;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addBanner = findViewById(R.id.banner);
+        viewBanner = findViewById(R.id.view_all_banner);
+        addFlower = findViewById(R.id.add_flower);
+        viewFlower = findViewById(R.id.view_all_flower);
+        viewOrder = findViewById(R.id.order);
+        viewProfile = findViewById(R.id.admin);
 
-        add_flower=findViewById(R.id.add_flower);
-        view_all_flower=findViewById(R.id.view_all_flower);
-        banner=findViewById(R.id.banner);
-        view_all_banner=findViewById(R.id.view_all_banner);
-        order=findViewById(R.id.order);
-        admin=findViewById(R.id.admin);
-
-
-
-        add_flower.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","add_flower");
-                startActivity(intent);
-            }
-        });
-        view_all_flower.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","view_all_flower");
-                startActivity(intent);
-            }
-        });
-        banner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","banner");
-                startActivity(intent);
-            }
-        });
-        view_all_banner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","view_all_banner");
-                startActivity(intent);
-            }
-        });
-        order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","order");
-                startActivity(intent);
-            }
-        });
-        admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("fragment_name","admin");
-                startActivity(intent);
-            }
-        });
+        addBanner.setOnClickListener(this);
+        viewBanner.setOnClickListener(this);
+        addFlower.setOnClickListener(this);
+        viewFlower.setOnClickListener(this);
+        viewOrder.setOnClickListener(this);
+        viewProfile.setOnClickListener(this);
 
     }
-    void replaceFragment(Fragment fragment){
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
-        fragmentTransaction.commit();
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.add_flower: {
+                callIntent("addFlower");
+                break;
+            }
+            case R.id.view_all_flower: {
+                callIntent("viewAllFlower");
+                break;
+            }
+            case R.id.banner: {
+                callIntent("addBanner");
+                break;
+            }
+            case R.id.view_all_banner: {
+                callIntent("viewAllBanner");
+                break;
+            }
+            case R.id.order: {
+                callIntent("viewOrder");
+                break;
+            }
+            case R.id.admin: {
+                callIntent("viewProfile");
+                break;
+            }
+        }
+    }
+
+    private void callIntent(String value) {
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        intent.putExtra("fragment_name", value);
+        startActivity(intent);
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-0 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -72,8 +72,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Add Flower"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -109,7 +110,8 @@
                     android:layout_marginTop="5dp"
                     android:text="    View \nAll Flower"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -145,8 +147,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Banner"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -182,7 +185,8 @@
                     android:layout_marginTop="5dp"
                     android:text="    View \nAll Banner"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -218,8 +222,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Order"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -255,8 +260,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Admin"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>

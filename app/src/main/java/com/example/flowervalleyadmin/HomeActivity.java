@@ -8,8 +8,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.flowervalleyadmin.Fragment.AddFlowerFragment;
 import com.example.flowervalleyadmin.Fragment.AdminFragment;
@@ -19,51 +21,73 @@ import com.example.flowervalleyadmin.Fragment.ViewAllBannerFragment;
 import com.example.flowervalleyadmin.Fragment.ViewAllFlowerFragment;
 
 public class HomeActivity extends AppCompatActivity {
-    String fragmentName;
+    private static final String TAG = "HomeActivity";
+    private String fragmentName = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
-
-        Intent intent=getIntent();
-        if(intent !=null){
-            fragmentName=intent.getStringExtra("fragment_name");
+        Intent intent = getIntent();
+        if (intent != null) {
+            fragmentName = intent.getStringExtra("fragment_name");
         }
 
-        switch (fragmentName){
-            case "add_flower":{
+        switch (fragmentName) {
+            case "addFlower": {
                 replaceFragment(new AddFlowerFragment());
                 break;
             }
-            case "view_all_flower":{
+            case "viewAllFlower": {
                 replaceFragment(new ViewAllFlowerFragment());
                 break;
             }
-            case "banner":{
+            case "addBanner": {
                 replaceFragment(new BannerFragment());
                 break;
             }
-            case "view_all_banner":{
+            case "viewAllBanner": {
                 replaceFragment(new ViewAllBannerFragment());
                 break;
             }
-            case "order":{
+            case "viewOrder": {
                 replaceFragment(new OrderFragment());
                 break;
             }
-            case "admin":{
+            case "viewProfile": {
                 replaceFragment(new AdminFragment());
                 break;
             }
-            default:{
-                Log.i(TAG,"onCreate: Fragment Name not found.");
+            default: {
+                Log.i(TAG, "onCreate: Fragment Name not found.");
             }
 
         }
 
+    }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i(TAG, "onActivityResult: " + requestCode);
+        Log.i(TAG, "onActivityResult: " + resultCode);
+        Log.i(TAG, "onActivityResult: " + data);
+
+        if (data != null && data.getData() != null) {
+            Uri mImageUri = data.getData();
+            Log.i(TAG, "onActivityResult: " + mImageUri);
+            Bundle bundle = new Bundle();
+            bundle.putString("image_uri", mImageUri.toString());
+
+            Toast.makeText(this, mImageUri + "", Toast.LENGTH_SHORT).show();
+            BannerFragment addBannerFragment = new BannerFragment();
+            addBannerFragment.setArguments(bundle);
+            replaceFragment(addBannerFragment);
+        } else {
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+        }
     }
 
     void replaceFragment(Fragment fragment){

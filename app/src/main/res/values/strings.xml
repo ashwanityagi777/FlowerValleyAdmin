@@ -14,4 +14,7 @@
     <string name="to_your_account">to your account</string>
     <string name="flower_valley_admin">Flower Valley Admin</string>
     <string name="verify">Verify</string>
+    <string name="choose_file">Choose File</string>
+    <string name="enter_file_name">Enter File Name</string>
+    <string name="upload">UPLOAD</string>
 </resources>
