@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.example.flowervalleyadmin.Model.BannerModel;
 import com.example.flowervalleyadmin.R;
-import com.example.flowervalleyadmin.ViewAllBannerAdapter;
+import com.example.flowervalleyadmin.Adapter.ViewAllBannerAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

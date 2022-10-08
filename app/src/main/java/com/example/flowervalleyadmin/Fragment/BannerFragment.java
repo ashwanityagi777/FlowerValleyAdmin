@@ -37,7 +37,7 @@ import com.google.firebase.storage.UploadTask;
 
 public class BannerFragment extends Fragment {
 
-    private static final String TAG = "AddBannerFragment";
+    private static final String TAG = "BannerFragment";
     private AppCompatButton mButtonChooseImage;
     private AppCompatButton mButtonUpload;
     private AppCompatTextView mTextViewShowUploads;

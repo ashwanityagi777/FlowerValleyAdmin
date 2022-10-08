@@ -1,4 +1,4 @@
-package com.example.flowervalleyadmin;
+package com.example.flowervalleyadmin.Adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.flowervalleyadmin.Model.BannerModel;
+import com.example.flowervalleyadmin.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;

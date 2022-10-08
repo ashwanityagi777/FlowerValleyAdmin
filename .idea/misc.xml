@@ -6,6 +6,7 @@
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable-v24/dashboard_bg.xml" value="0.1" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable-v24/ic_call.xml" value="0.1" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable-v24/view_all_recycler_bg.xml" value="0.1" />
+        <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable/add_flower_fragment_bg.xml" value="0.229" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable/choose_bg_shape.xml" value="0.229" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/drawable/login_button.xml" value="0.229" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/activity_home.xml" value="0.21784420289855072" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/activity_otpverify.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/activity_splash.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/banner_list_layout.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/flower_list_layout.xml" value="0.164275956284153" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/fragment_add_flower.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/fragment_admin.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/ASHWANI TYAGI/AndroidStudioProjects/FlowerValleyAdmin/app/src/main/res/layout/fragment_banner.xml" value="0.21784420289855072" />
